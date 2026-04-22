@@ -31,16 +31,16 @@ export function Footer() {
                 className="h-12 w-auto object-contain"
               />
             </Link>
-            
+
             <p className="text-white/50 leading-relaxed mb-6 max-w-md">
-              Transformando ideias em experiências digitais que geram resultados. 
+              Transformando ideias em experiências digitais que geram resultados.
               Sites estratégicos para empresas que querem crescer.
             </p>
 
             {/* Redes sociais */}
             <div className="flex gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/vortex.websites/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -58,7 +58,7 @@ export function Footer() {
                 <Instagram className="w-4 h-4 text-white/60 hover:text-[#E1306C]" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/pedro-paulo-faria-6873821a7/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -121,7 +121,7 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#00D4FF] mt-1 flex-shrink-0" />
                 <span className="text-white/50 text-sm">
-                  contato@vortexsites.com.br
+                  pedropfariaa@gmail.com
                 </span>
               </div>
               <div className="flex items-start gap-3">
