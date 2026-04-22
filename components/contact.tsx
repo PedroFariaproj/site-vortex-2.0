@@ -4,10 +4,10 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { 
-  Send, 
-  MessageCircle, 
-  Mail, 
+import {
+  Send,
+  MessageCircle,
+  Mail,
   Phone,
   CheckCircle2,
   Instagram,
@@ -22,7 +22,7 @@ export function Contact() {
     phone: "",
     message: "",
   })
-  
+
   // Estado de envio
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -39,13 +39,13 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulação de envio (substitua por integração real)
     await new Promise(resolve => setTimeout(resolve, 1500))
-    
+
     setIsSubmitting(false)
     setIsSubmitted(true)
-    
+
     // Reset após 5 segundos
     setTimeout(() => {
       setIsSubmitted(false)
@@ -59,20 +59,20 @@ export function Contact() {
       className="relative py-24 lg:py-32 overflow-hidden"
     >
       {/* Background decorativo */}
-      <div 
+      <div
         className="
           absolute top-0 left-1/2 -translate-x-1/2
           w-[600px] h-[600px] 
           bg-[#00D4FF]/5 
           rounded-full 
           blur-[150px]
-        " 
+        "
       />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header da seção */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span 
+          <span
             className="
               inline-block
               text-[#00D4FF] text-sm font-semibold
@@ -82,8 +82,8 @@ export function Contact() {
           >
             Contato
           </span>
-          
-          <h2 
+
+          <h2
             className="
               text-3xl sm:text-4xl lg:text-5xl
               font-bold text-white
@@ -93,9 +93,9 @@ export function Contact() {
             Vamos conversar sobre{" "}
             <span className="gradient-vortex-text">seu projeto?</span>
           </h2>
-          
+
           <p className="text-lg text-white/60 leading-relaxed">
-            Preencha o formulário abaixo e receba um orçamento personalizado 
+            Preencha o formulário abaixo e receba um orçamento personalizado
             em até 24 horas. Sem compromisso.
           </p>
         </div>
@@ -113,7 +113,7 @@ export function Contact() {
               {isSubmitted ? (
                 // Mensagem de sucesso
                 <div className="text-center py-12">
-                  <div 
+                  <div
                     className="
                       w-16 h-16 mx-auto mb-6
                       bg-gradient-to-br from-[#00D4FF] to-[#8B5CF6]
@@ -134,7 +134,7 @@ export function Contact() {
                 // Formulário
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label 
+                    <label
                       htmlFor="name"
                       className="block text-sm font-medium text-white/80 mb-2"
                     >
@@ -161,7 +161,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label 
+                    <label
                       htmlFor="email"
                       className="block text-sm font-medium text-white/80 mb-2"
                     >
@@ -188,7 +188,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label 
+                    <label
                       htmlFor="phone"
                       className="block text-sm font-medium text-white/80 mb-2"
                     >
@@ -215,7 +215,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label 
+                    <label
                       htmlFor="message"
                       className="block text-sm font-medium text-white/80 mb-2"
                     >
@@ -289,7 +289,7 @@ export function Contact() {
             <div className="space-y-6">
               {/* WhatsApp */}
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5511994576716"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -303,7 +303,7 @@ export function Contact() {
                   group
                 "
               >
-                <div 
+                <div
                   className="
                     w-12 h-12
                     bg-gradient-to-br from-[#25D366] to-[#128C7E]
@@ -335,7 +335,7 @@ export function Contact() {
                   group
                 "
               >
-                <div 
+                <div
                   className="
                     w-12 h-12
                     bg-gradient-to-br from-[#00D4FF] to-[#0066FF]
@@ -349,13 +349,13 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">E-mail</p>
-                  <p className="text-sm text-white/50">contato@vortexsites.com.br</p>
+                  <p className="text-sm text-white/50">pedropfariaa@gmail.com</p>
                 </div>
               </a>
 
               {/* Telefone */}
               <a
-                href="tel:+5500000000000"
+                href="tel:+5511994576716"
                 className="
                   flex items-center gap-4
                   p-4
@@ -367,7 +367,7 @@ export function Contact() {
                   group
                 "
               >
-                <div 
+                <div
                   className="
                     w-12 h-12
                     bg-gradient-to-br from-[#8B5CF6] to-[#A855F7]
@@ -381,7 +381,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">Telefone</p>
-                  <p className="text-sm text-white/50">(00) 00000-0000</p>
+                  <p className="text-sm text-white/50">(11) 99457-6716</p>
                 </div>
               </a>
             </div>
@@ -391,7 +391,7 @@ export function Contact() {
               <p className="text-sm text-white/50 mb-4">Siga nas redes:</p>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/vortex.websites/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
@@ -409,7 +409,7 @@ export function Contact() {
                   <Instagram className="w-5 h-5 text-white/70 hover:text-[#E1306C]" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/pedro-paulo-faria-6873821a7/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
