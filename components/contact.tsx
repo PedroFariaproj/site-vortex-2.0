@@ -323,7 +323,7 @@ export function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:contato@vortexsites.com.br"
+                href="mailto::sitesvortex@gmail.com"
                 className="
                   flex items-center gap-4
                   p-4
@@ -349,7 +349,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">E-mail</p>
-                  <p className="text-sm text-white/50">pedropfariaa@gmail.com</p>
+                  <p className="text-sm text-white/50">sitesvortex@gmail.com</p>
                 </div>
               </a>
 

@@ -76,7 +76,7 @@ export function Footer() {
                 <Linkedin className="w-4 h-4 text-white/60 hover:text-[#0077B5]" />
               </a>
               <a
-                href="mailto:contato@vortexsites.com.br"
+                href="mailto:sitesvortex@gmail.com"
                 className="
                   w-10 h-10
                   bg-white/5
@@ -121,7 +121,7 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#00D4FF] mt-1 flex-shrink-0" />
                 <span className="text-white/50 text-sm">
-                  pedropfariaa@gmail.com
+                  sitesvortex@gmail.com
                 </span>
               </div>
               <div className="flex items-start gap-3">
