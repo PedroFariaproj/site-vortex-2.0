@@ -146,8 +146,8 @@ export function Hero() {
               Empresas que já transformaram sua presença digital
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-              {/* Logos de clientes (usando placeholders estilizados) */}
-              {["Cliente A", "Cliente B", "Cliente C", "Cliente D"].map((client, index) => (
+              {/* Logos de clientes reais */}
+              {["TechFlow Solutions", "Bella Moda", "Clínica Bem-Estar", "PowerFit Academia"].map((client, index) => (
                 <div
                   key={client}
                   className="
