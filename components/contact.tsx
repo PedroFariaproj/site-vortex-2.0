@@ -35,16 +35,40 @@ export function Contact() {
     }))
   }
 
-  // Handler para envio do formulário
+  // Handler para envio do formulário - Envia direto para WhatsApp
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulação de envio (substitua por integração real)
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // Monta a mensagem formatada para o WhatsApp
+    const mensagem = `
+*Novo Orçamento - Vortex Sites*
+
+*Nome:* ${formData.name}
+*E-mail:* ${formData.email}
+*WhatsApp:* ${formData.phone}
+
+*Mensagem:*
+${formData.message}
+    `.trim()
+
+    // Número do WhatsApp da Vortex (sem o +)
+    const numeroWhatsApp = "5511994576716"
+
+    // Codifica a mensagem para URL
+    const mensagemCodificada = encodeURIComponent(mensagem)
+
+    // URL do WhatsApp
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`
+
+    // Pequeno delay para feedback visual
+    await new Promise(resolve => setTimeout(resolve, 800))
 
     setIsSubmitting(false)
     setIsSubmitted(true)
+
+    // Abre o WhatsApp em nova aba
+    window.open(urlWhatsApp, "_blank")
 
     // Reset após 5 segundos
     setTimeout(() => {
@@ -124,10 +148,10 @@ export function Contact() {
                     <CheckCircle2 className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">
-                    Mensagem enviada!
+                    Redirecionando para o WhatsApp!
                   </h3>
                   <p className="text-white/60">
-                    Obrigado pelo contato. Retornarei em breve!
+                    Complete o envio no WhatsApp que abriu. Responderemos em breve!
                   </p>
                 </div>
               ) : (
