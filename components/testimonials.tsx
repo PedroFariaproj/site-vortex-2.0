@@ -34,6 +34,20 @@ const testimonials = [
     content: "A landing page ficou perfeita. Texto persuasivo, design profissional e resultado imediato. Mais de 500 contatos no primeiro mês. Pedro é um profissional excepcional.",
     rating: 5,
   },
+  {
+    id: 5,
+    name: "Ricardo Santos",
+    role: "Diretor, PowerFit Academia",
+    content: "O site transmite exatamente a energia da nossa academia. As matrículas online aumentaram 90% e recebemos elogios diários dos alunos. O investimento valeu cada centavo!",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Chef Juliana Rocha",
+    role: "Proprietária, Sabor & Arte",
+    content: "Nosso restaurante precisava de um site à altura da nossa gastronomia. O Pedro entregou algo sofisticado e elegante. As reservas pelo site cresceram absurdamente. Trabalho impecável!",
+    rating: 5,
+  },
 ]
 
 export function Testimonials() {
