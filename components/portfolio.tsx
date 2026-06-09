@@ -1,6 +1,7 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
+import { TrendingUp, ExternalLink } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -10,75 +11,19 @@ import { Button } from "@/components/ui/button"
 // navbar, hero, seções, cards, botões, tipografia e hierarquia visual.
 // ─────────────────────────────────────────────────────────────────────────────
 
-// ── TechFlow Solutions – Site institucional tech / SaaS ──────────────────────
-function TechFlowUI() {
+// ── Studio Lê Rodrigues – Site real (cliente em produção) ────────────────────
+// Exibe uma captura real do site publicado em vez de uma UI simulada.
+function StudioLeRodriguesUI() {
   return (
-    <div className="w-full h-full bg-[#0D0D1F] text-white font-sans overflow-hidden select-none">
-      {/* Navbar */}
-      <div className="flex items-center justify-between px-4 py-2 bg-[#0D0D1F]/90 border-b border-white/5">
-        <div className="flex items-center gap-1.5">
-          <div className="w-4 h-4 rounded bg-gradient-to-br from-cyan-400 to-blue-500" />
-          <span className="text-[10px] font-bold text-white tracking-wide">TechFlow</span>
-        </div>
-        <div className="hidden sm:flex items-center gap-3">
-          {["Soluções","Planos","Sobre","Blog"].map(i => (
-            <span key={i} className="text-[8px] text-white/50">{i}</span>
-          ))}
-        </div>
-        <div className="bg-cyan-500 text-[7px] font-semibold text-black px-2 py-1 rounded">
-          Começar grátis
-        </div>
-      </div>
-
-      {/* Hero */}
-      <div className="px-4 pt-4 pb-3">
-        <div className="inline-block bg-cyan-400/10 border border-cyan-400/20 rounded-full px-2 py-0.5 mb-2">
-          <span className="text-[7px] text-cyan-400 font-medium">Novo: Integração com IA generativa</span>
-        </div>
-        <h1 className="text-[13px] font-extrabold leading-tight text-white mb-1.5">
-          Automatize seu negócio<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-            com tecnologia real
-          </span>
-        </h1>
-        <p className="text-[8px] text-white/50 mb-3 max-w-[160px]">
-          Plataforma SaaS que conecta equipes, automatiza processos e gera resultados mensuráveis.
-        </p>
-        <div className="flex items-center gap-2">
-          <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-[7px] font-semibold text-white px-3 py-1.5 rounded">
-            Testar grátis por 14 dias
-          </div>
-          <div className="border border-white/20 text-[7px] text-white/70 px-3 py-1.5 rounded">
-            Ver demonstração
-          </div>
-        </div>
-      </div>
-
-      {/* Métricas */}
-      <div className="grid grid-cols-3 gap-1.5 px-4 mb-3">
-        {[["3.200+","Clientes"],["98%","Satisfação"],["40h","Economizadas/mês"]].map(([num, label]) => (
-          <div key={label} className="bg-white/5 rounded-lg p-2 text-center">
-            <div className="text-[11px] font-bold text-cyan-400">{num}</div>
-            <div className="text-[6px] text-white/40 mt-0.5">{label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Feature cards */}
-      <div className="grid grid-cols-2 gap-1.5 px-4">
-        {[
-          ["Automação","Elimine tarefas manuais com fluxos inteligentes"],
-          ["Analytics","Dashboard em tempo real com métricas que importam"],
-          ["Integrações","Conecte +150 ferramentas com um clique"],
-          ["Segurança","Criptografia de ponta a ponta e conformidade LGPD"],
-        ].map(([title, desc]) => (
-          <div key={title} className="bg-white/[0.04] border border-white/5 rounded-lg p-2">
-            <div className="w-3 h-3 rounded bg-gradient-to-br from-cyan-400 to-blue-500 mb-1.5" />
-            <div className="text-[8px] font-semibold text-white mb-0.5">{title}</div>
-            <div className="text-[6px] text-white/40 leading-tight">{desc}</div>
-          </div>
-        ))}
-      </div>
+    <div className="w-full h-full bg-[#0D0D1F] overflow-hidden select-none">
+      <Image
+        src="/images/portfolio/studio-le-rodrigues.png"
+        alt="Prévia do site Studio Lê Rodrigues"
+        width={1440}
+        height={900}
+        className="w-full h-auto object-cover object-top"
+        priority
+      />
     </div>
   )
 }
@@ -462,17 +407,18 @@ function RestauranteUI() {
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Dados dos projetos – cada UI component mapeia para um projeto real
-// ─────────────────────────────────────────────────────────────────────────────
+// ────────────────────��────────────────────────────────────────────────────────
 const projects = [
   {
     id: 1,
-    name: "TechFlow Solutions",
+    name: "Studio Lê Rodrigues",
     type: "Site Institucional",
-    description: "Empresa de tecnologia que triplicou a geração de leads em 3 meses após o lançamento do novo site.",
-    result: "+200% em leads",
-    accent: "#00D4FF",
-    gradientBar: "from-[#00D4FF] to-[#0066FF]",
-    UI: TechFlowUI,
+    description: "Studio de beleza especializado em noivas e estética. Site elegante com agendamento que aumentou os contatos via WhatsApp e fortaleceu a presença digital da marca.",
+    result: "Presença digital premium",
+    accent: "#C9A24B",
+    gradientBar: "from-[#C9A24B] to-[#E0C074]",
+    url: "https://studiolerodrigues.vercel.app",
+    UI: StudioLeRodriguesUI,
   },
   {
     id: 2,
@@ -531,12 +477,14 @@ const projects = [
 // Hover: elevação do card, zoom sutil na UI, sombra intensa, glow da marca.
 // Sem cursor pointer, sem clique, sem botões de link.
 // ─────────────────────────────────────────────────────────────────────────────
-function ProjectCard({ project }: { project: typeof projects[0] }) {
+function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   const { UI } = project
+  // Quando o projeto tem URL, o card vira um link clicável que abre o site real.
+  const hasLink = "url" in project && Boolean(project.url)
 
-  return (
+  const cardInner = (
     <div
-      className="
+      className={`
         group
         bg-[#12122A]/60 backdrop-blur-sm
         border border-white/5
@@ -545,9 +493,9 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
         transition-all duration-300 ease-out
         hover:-translate-y-2
         hover:border-white/10
-        cursor-default
         select-none
-      "
+        ${hasLink ? "cursor-pointer" : "cursor-default"}
+      `}
       style={{
         // Sombra padrão sutil, sombra intensa + glow de marca no hover
         // via CSS custom properties pois Tailwind não suporta glow dinâmico
@@ -579,7 +527,9 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
               <path d="M9 5V3.5a3 3 0 0 0-6 0V5H2v6h8V5H9zm-4-1.5a1 1 0 0 1 2 0V5H5V3.5z"/>
             </svg>
             <span className="text-[7px] text-white/30 truncate">
-              www.{project.name.toLowerCase().replace(/\s+/g, "")}.com.br
+              {hasLink
+                ? project.url!.replace(/^https?:\/\//, "")
+                : `www.${project.name.toLowerCase().replace(/\s+/g, "")}.com.br`}
             </span>
           </div>
         </div>
@@ -597,8 +547,37 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           <UI />
         </div>
 
+        {/* Overlay "Visitar site" – aparece no hover apenas em projetos com link */}
+        {hasLink && (
+          <div
+            className="
+              absolute inset-0 z-20
+              flex items-center justify-center
+              bg-black/40 backdrop-blur-[2px]
+              opacity-0 group-hover:opacity-100
+              transition-opacity duration-300
+              pointer-events-none
+            "
+          >
+            <span
+              className="
+                flex items-center gap-2
+                bg-white/95 text-[#0A0A1B]
+                text-sm font-semibold
+                px-4 py-2 rounded-full
+                shadow-lg
+                translate-y-2 group-hover:translate-y-0
+                transition-transform duration-300
+              "
+            >
+              Visitar site
+              <ExternalLink className="w-4 h-4" />
+            </span>
+          </div>
+        )}
+
         {/* Barra de cor da marca na base do preview */}
-        <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${project.gradientBar} opacity-60 group-hover:opacity-100 transition-opacity duration-300`} />
+        <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${project.gradientBar} opacity-60 group-hover:opacity-100 transition-opacity duration-300 z-20`} />
       </div>
 
       {/* ── Informações do card ───────────────────────────────────────────── */}
@@ -612,11 +591,11 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
         </span>
 
         {/* Nome */}
-        <h3
-          className="text-base font-bold text-white mb-2 transition-colors duration-300"
-          style={{}}
-        >
+        <h3 className="text-base font-bold text-white mb-2 transition-colors duration-300 flex items-center gap-1.5">
           {project.name}
+          {hasLink && (
+            <ExternalLink className="w-3.5 h-3.5 text-white/40 group-hover:text-white/70 transition-colors" />
+          )}
         </h3>
 
         {/* Descrição */}
@@ -632,6 +611,23 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
       </div>
     </div>
   )
+
+  // Projeto com link: envolve em <a> que abre o site real em nova aba.
+  if (hasLink) {
+    return (
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visitar o site ${project.name} em uma nova aba`}
+        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00D4FF]/50 rounded-2xl"
+      >
+        {cardInner}
+      </a>
+    )
+  }
+
+  return cardInner
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

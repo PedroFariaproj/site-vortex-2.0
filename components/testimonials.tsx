@@ -8,9 +8,9 @@ import { Star, Quote } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Mariana Costa",
-    role: "CEO, TechFlow Solutions",
-    content: "O Pedro entendeu exatamente o que precisávamos. Nosso site antigo não gerava nenhum lead. Em 3 meses com o novo site, triplicamos nossa geração de contatos qualificados. Investimento que se pagou rapidamente.",
+    name: "Letícia Rodrigues",
+    role: "Proprietária, Studio Lê Rodrigues",
+    content: "O Pedro entendeu exatamente a essência do meu studio. O site ficou elegante, profissional e transmite todo o cuidado que tenho com minhas clientes. Os agendamentos pelo WhatsApp aumentaram muito desde o lançamento!",
     rating: 5,
   },
   {
