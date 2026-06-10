@@ -28,79 +28,18 @@ function StudioLeRodriguesUI() {
   )
 }
 
-// ── Bella Moda – E-commerce de moda feminina ─────────────────────────────────
-function BellaModeUI() {
-  const products = [
-    { name: "Vestido Elegante", price: "R$ 289", color: "#D4A5C9", badge: "Novo" },
-    { name: "Blazer Premium", price: "R$ 459", color: "#B8C4E8", badge: "Top" },
-    { name: "Saia Midi", price: "R$ 179", color: "#E8D5B7", badge: "" },
-    { name: "Conjunto Linho", price: "R$ 379", color: "#C9D4A5", badge: "Off" },
-  ]
+// ── iPhone Premium – Loja virtual de iPhones (cliente em produção) ───────────
+// Exibe uma captura real do site publicado em vez de uma UI simulada.
+function LojaVirtualIphonesUI() {
   return (
-    <div className="w-full h-full bg-[#FAF8F5] font-sans overflow-hidden select-none">
-      {/* Navbar */}
-      <div className="flex items-center justify-between px-4 py-2 bg-white border-b border-stone-100">
-        <span className="text-[10px] font-bold text-stone-800 tracking-[0.15em] uppercase">Bella Moda</span>
-        <div className="hidden sm:flex items-center gap-3">
-          {["Coleções","Novidades","Sale","Sobre"].map(i => (
-            <span key={i} className="text-[7px] text-stone-500">{i}</span>
-          ))}
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="text-[7px] text-stone-500">Buscar</div>
-          <div className="w-4 h-4 bg-stone-800 rounded-full flex items-center justify-center">
-            <span className="text-[6px] text-white">2</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Banner hero */}
-      <div className="relative bg-gradient-to-r from-stone-800 to-stone-600 mx-4 mt-3 rounded-xl p-4 mb-3 overflow-hidden">
-        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#D4A5C9]/30 to-transparent" />
-        <div className="text-[7px] text-white/60 mb-1 uppercase tracking-widest">Nova coleção</div>
-        <div className="text-[12px] font-bold text-white leading-tight mb-2">
-          Verão 2025<br />
-          <span className="text-[#D4A5C9]">Elegância & Estilo</span>
-        </div>
-        <div className="bg-white text-[7px] font-semibold text-stone-800 px-3 py-1 rounded inline-block">
-          Ver coleção
-        </div>
-      </div>
-
-      {/* Label seção */}
-      <div className="px-4 mb-2 flex items-center justify-between">
-        <span className="text-[9px] font-bold text-stone-800 uppercase tracking-widest">Mais vendidos</span>
-        <span className="text-[7px] text-stone-400">Ver todos</span>
-      </div>
-
-      {/* Grid de produtos */}
-      <div className="grid grid-cols-2 gap-2 px-4">
-        {products.map((p) => (
-          <div key={p.name} className="bg-white rounded-xl overflow-hidden shadow-sm">
-            {/* Imagem do produto (bloco de cor) */}
-            <div className="relative h-16" style={{ backgroundColor: p.color + "55" }}>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-8 h-12 rounded" style={{ backgroundColor: p.color }} />
-              </div>
-              {p.badge && (
-                <div className="absolute top-1.5 left-1.5 bg-stone-800 text-white text-[6px] font-bold px-1.5 py-0.5 rounded">
-                  {p.badge}
-                </div>
-              )}
-              <div className="absolute top-1.5 right-1.5 w-4 h-4 bg-white rounded-full flex items-center justify-center shadow">
-                <div className="w-2 h-2 border border-stone-300 rounded-full" />
-              </div>
-            </div>
-            <div className="p-2">
-              <div className="text-[7px] font-semibold text-stone-800 leading-tight">{p.name}</div>
-              <div className="text-[8px] font-bold text-stone-900 mt-0.5">{p.price}</div>
-              <div className="mt-1.5 bg-stone-800 text-white text-[6px] text-center py-1 rounded-lg">
-                Adicionar
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="w-full h-full bg-black overflow-hidden select-none">
+      <Image
+        src="/images/portfolio/loja-virtual-iphones.png"
+        alt="Prévia do site iPhone Premium - loja virtual de iPhones"
+        width={1440}
+        height={900}
+        className="w-full h-auto object-cover object-top"
+      />
     </div>
   )
 }
@@ -422,13 +361,14 @@ const projects = [
   },
   {
     id: 2,
-    name: "Bella Moda",
+    name: "iPhone Premium",
     type: "E-commerce",
-    description: "Loja de moda feminina que aumentou as vendas online em 150% com um design focado em conversão.",
-    result: "+150% em vendas",
-    accent: "#A855F7",
-    gradientBar: "from-[#8B5CF6] to-[#A855F7]",
-    UI: BellaModeUI,
+    description: "Loja virtual de iPhones premium revisados, com catálogo de produtos, carrinho de compras e design moderno focado em conversão e confiança.",
+    result: "Loja online completa",
+    accent: "#0A84FF",
+    gradientBar: "from-[#0A84FF] to-[#5AC8FA]",
+    url: "https://lojavirtualiphones.vercel.app",
+    UI: LojaVirtualIphonesUI,
   },
   {
     id: 3,
