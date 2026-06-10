@@ -16,8 +16,8 @@ const testimonials = [
   {
     id: 2,
     name: "Roberto Almeida",
-    role: "Proprietário, Bella Moda",
-    content: "Tinha receio de investir em e-commerce, mas o resultado superou todas as expectativas. O site é lindo, fácil de gerenciar e as vendas aumentaram 150%. Recomendo demais!",
+    role: "Proprietário, iPhone Premium",
+    content: "Tinha receio de investir em uma loja virtual, mas o resultado superou todas as expectativas. O site é lindo, rápido e fácil de gerenciar. Meus clientes elogiam a experiência de compra. Recomendo demais!",
     rating: 5,
   },
   {

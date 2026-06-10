@@ -147,7 +147,7 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
               {/* Logos de clientes reais */}
-              {["Studio Lê Rodrigues", "Bella Moda", "Clínica Bem-Estar", "PowerFit Academia"].map((client, index) => (
+              {["Studio Lê Rodrigues", "iPhone Premium", "Clínica Bem-Estar", "PowerFit Academia"].map((client, index) => (
                 <div
                   key={client}
                   className="
