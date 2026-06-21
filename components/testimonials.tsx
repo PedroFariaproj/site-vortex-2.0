@@ -29,9 +29,9 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Carlos Mendes",
-    role: "Fundador, Consultoria Financeira",
-    content: "A landing page ficou perfeita. Texto persuasivo, design profissional e resultado imediato. Mais de 500 contatos no primeiro mês. Pedro é um profissional excepcional.",
+    name: "Elisangela Lima",
+    role: "Fisioterapeuta, Elisangela Lima Fisioterapia",
+    content: "A landing page ficou perfeita. Transmite exatamente o cuidado e o profissionalismo do meu trabalho. Os agendamentos pelo WhatsApp aumentaram bastante e os pacientes elogiam muito o site. Pedro é um profissional excepcional.",
     rating: 5,
   },
   {

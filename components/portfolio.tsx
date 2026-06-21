@@ -44,75 +44,18 @@ function LojaVirtualIphonesUI() {
   )
 }
 
-// ── Consultoria Financeira – Landing page de alta conversão ──────────────────
-function ConsultoriaUI() {
+// ── Elisangela Lima Fisioterapia – Landing page (cliente em produção) ────────
+// Exibe uma captura real do site publicado em vez de uma UI simulada.
+function ElisangelaFisioUI() {
   return (
-    <div className="w-full h-full bg-[#0B1120] text-white font-sans overflow-hidden select-none">
-      {/* Navbar */}
-      <div className="flex items-center justify-between px-4 py-2 border-b border-white/5">
-        <div className="flex items-center gap-1.5">
-          <div className="w-5 h-5 rounded bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-            <span className="text-[8px] font-black text-white">CF</span>
-          </div>
-          <span className="text-[9px] font-bold text-white">Capital Focus</span>
-        </div>
-        <div className="bg-amber-500 text-[7px] font-bold text-black px-2 py-1 rounded">
-          Consultoria grátis
-        </div>
-      </div>
-
-      {/* Hero */}
-      <div className="px-4 pt-4 pb-3 text-center">
-        <div className="inline-block bg-amber-400/10 border border-amber-400/20 rounded-full px-3 py-0.5 mb-2">
-          <span className="text-[7px] text-amber-400">+R$ 2.4 bi em patrimônio gerenciado</span>
-        </div>
-        <h1 className="text-[12px] font-extrabold leading-tight mb-1.5">
-          Seu patrimônio crescendo<br />
-          <span className="text-amber-400">de forma inteligente</span>
-        </h1>
-        <p className="text-[8px] text-white/50 mb-3">
-          Estratégias personalizadas para proteger e multiplicar seus investimentos.
-        </p>
-        <div className="bg-gradient-to-r from-amber-500 to-amber-400 text-[8px] font-bold text-black px-4 py-2 rounded-lg inline-block mb-4">
-          Agendar diagnóstico gratuito
-        </div>
-      </div>
-
-      {/* Gráfico simulado */}
-      <div className="mx-4 bg-white/[0.04] border border-white/5 rounded-xl p-3 mb-3">
-        <div className="flex items-end justify-between gap-1 h-12 mb-1">
-          {[30,45,35,60,50,75,65,90,80,100].map((h, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded-t"
-              style={{
-                height: `${h}%`,
-                background: `rgba(245, 158, 11, ${0.3 + (i / 10) * 0.7})`,
-              }}
-            />
-          ))}
-        </div>
-        <div className="flex justify-between">
-          <span className="text-[6px] text-white/30">Jan</span>
-          <span className="text-[6px] text-white/30">Dez</span>
-        </div>
-        <div className="mt-1 text-[7px] text-white/40">Rentabilidade acumulada da carteira</div>
-      </div>
-
-      {/* Serviços */}
-      <div className="grid grid-cols-3 gap-1.5 px-4">
-        {[
-          ["Planejamento","Estratégia personalizada de longo prazo"],
-          ["Investimentos","Renda fixa, variável e fundos exclusivos"],
-          ["Proteção","Seguro de vida e previdência privada"],
-        ].map(([title, desc]) => (
-          <div key={title} className="bg-white/[0.04] border border-white/5 rounded-lg p-2">
-            <div className="w-3 h-3 rounded bg-amber-500/20 border border-amber-500/30 mb-1.5" />
-            <div className="text-[7px] font-semibold text-white mb-0.5">{title}</div>
-            <div className="text-[6px] text-white/30 leading-tight">{desc}</div>
-          </div>
-        ))}
-      </div>
+    <div className="w-full h-full bg-white overflow-hidden select-none">
+      <Image
+        src="/images/portfolio/elisangela-fisio.png"
+        alt="Prévia do site Elisangela Lima - fisioterapia domiciliar especializada"
+        width={1440}
+        height={900}
+        className="w-full h-auto object-cover object-top"
+      />
     </div>
   )
 }
@@ -371,14 +314,15 @@ const projects = [
     UI: LojaVirtualIphonesUI,
   },
   {
-    id: 3,
-    name: "Consultoria Financeira",
-    type: "Landing Page",
-    description: "Landing page de alta conversão que gerou mais de 500 novos contatos no primeiro mês.",
-    result: "+500 contatos/mês",
-    accent: "#F59E0B",
-    gradientBar: "from-[#F59E0B] to-[#EF4444]",
-    UI: ConsultoriaUI,
+  id: 3,
+  name: "Elisangela Lima Fisioterapia",
+  type: "Landing Page",
+  description: "Landing page de fisioterapia domiciliar especializada, com design humanizado e foco em agendamentos via WhatsApp para pacientes em recuperação.",
+  result: "Agendamentos via WhatsApp",
+  accent: "#16A34A",
+  gradientBar: "from-[#16A34A] to-[#4ADE80]",
+  url: "https://elisangelafisio.vercel.app/",
+  UI: ElisangelaFisioUI,
   },
   {
     id: 4,
