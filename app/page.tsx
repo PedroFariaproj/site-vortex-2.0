@@ -24,6 +24,7 @@ import { Testimonials } from "@/components/testimonials"
 import { FinalCTA } from "@/components/final-cta"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 
 export default function Home() {
   return (
@@ -114,6 +115,13 @@ export default function Home() {
         - Copyright e créditos
       */}
       <Footer />
+
+      {/*
+        Botão flutuante de WhatsApp
+        - Fixo no canto inferior direito em todas as telas
+        - Abre conversa com mensagem pré-preenchida
+      */}
+      <WhatsAppFloat />
     </>
   )
 }
