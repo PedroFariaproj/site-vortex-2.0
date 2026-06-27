@@ -53,15 +53,23 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <nav className="flex items-center justify-between">
-          {/* Logo da Vortex */}
-          <Link href="#inicio" className="flex-shrink-0">
+          {/* Logo da Vortex - mix-blend-mode dissolve o fundo escuro do JPEG.
+              Escala ampliada (origem à esquerda) compensa as margens do arquivo. */}
+          <Link href="#inicio" className="flex-shrink-0 overflow-visible h-10 flex items-center">
             <Image
               src="/images/logo-vortex.jpeg"
               alt="Vortex Sites - Logo"
               width={150}
               height={50}
-              className="h-10 w-auto object-contain"
+              className="h-10 w-auto object-contain scale-[1.7] origin-left"
               priority
+              style={{
+                mixBlendMode: "screen",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 68% 42% at 50% 50%, black 42%, transparent 82%)",
+                maskImage:
+                  "radial-gradient(ellipse 68% 42% at 50% 50%, black 42%, transparent 82%)",
+              }}
             />
           </Link>
 

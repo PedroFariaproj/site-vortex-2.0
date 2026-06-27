@@ -22,13 +22,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Coluna 1: Logo e descrição */}
           <div className="lg:col-span-2">
-            <Link href="#inicio" className="inline-block mb-6">
+            <Link href="#inicio" className="inline-flex items-center h-12 overflow-visible mb-6">
               <Image
                 src="/images/logo-vortex.jpeg"
                 alt="Vortex Sites"
                 width={160}
                 height={50}
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain scale-[1.7] origin-left"
+                style={{
+                  mixBlendMode: "screen",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 68% 42% at 50% 50%, black 42%, transparent 82%)",
+                  maskImage:
+                    "radial-gradient(ellipse 68% 42% at 50% 50%, black 42%, transparent 82%)",
+                }}
               />
             </Link>
 
