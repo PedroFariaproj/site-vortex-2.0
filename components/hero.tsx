@@ -6,6 +6,15 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
 import { HeroNotebook } from "@/components/hero-notebook"
 
+// Logos de clientes reais exibidos na faixa de prova social
+const CLIENTS = [
+  { name: "Studio Lê Rodrigues", tagline: "Fisioterapia" },
+  { name: "Pausa Fit", tagline: "Marmitas Saudáveis" },
+  { name: "Equilibrium", tagline: "Academia" },
+  { name: "Bruna Teixeira", tagline: "Odontologia" },
+  { name: "Instituto Axis", tagline: "" },
+]
+
 // Variantes de animação para entrada suave do conteúdo textual (esquerda -> direita)
 const containerVariants = {
   hidden: {},
@@ -176,24 +185,37 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="mt-16 lg:mt-20 pt-8 border-t border-white/10"
         >
-          <p className="text-sm text-white/40 mb-6 text-center">
+          <p className="text-sm text-white/40 mb-8 text-center">
             Empresas que já transformaram sua presença digital
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-            {["Studio Lê Rodrigues", "iPhone Premium", "Clínica Bem-Estar", "PowerFit Academia"].map(
-              (client) => (
-                <div
-                  key={client}
-                  className="
-                    text-white/30 font-semibold text-base sm:text-lg
-                    hover:text-white/50 transition-colors
-                    cursor-default
-                  "
-                >
-                  {client}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-6 sm:gap-x-8 lg:gap-x-10">
+            {CLIENTS.map((client, index) => (
+              <div key={client.name} className="flex items-center gap-x-6 sm:gap-x-8 lg:gap-x-10">
+                {/* Logo textual estilizado */}
+                <div className="group flex flex-col items-center text-center cursor-default">
+                  <span
+                    className="
+                      font-serif tracking-wide leading-none
+                      text-base sm:text-lg
+                      text-white/40 group-hover:text-white/70
+                      transition-colors duration-300
+                    "
+                  >
+                    {client.name}
+                  </span>
+                  {client.tagline && (
+                    <span className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white/25 group-hover:text-white/40 transition-colors duration-300">
+                      {client.tagline}
+                    </span>
+                  )}
                 </div>
-              )
-            )}
+
+                {/* Divisor vertical (exceto após o último) */}
+                {index < CLIENTS.length - 1 && (
+                  <span className="hidden sm:block h-8 w-px bg-white/10" aria-hidden="true" />
+                )}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
