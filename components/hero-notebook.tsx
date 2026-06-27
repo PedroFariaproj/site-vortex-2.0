@@ -156,10 +156,13 @@ export function HeroNotebook() {
             style={{
               mixBlendMode: "screen",
               filter: "drop-shadow(0 0 35px rgba(168,85,247,0.55))",
+              // Máscara dupla: elipse central + reforço para apagar cantos
               WebkitMaskImage:
-                "radial-gradient(ellipse 70% 62% at 50% 50%, black 42%, rgba(0,0,0,0.7) 62%, transparent 84%)",
+                "radial-gradient(ellipse 62% 55% at 50% 48%, black 30%, rgba(0,0,0,0.55) 52%, transparent 72%), linear-gradient(to right, transparent, black 14%, black 86%, transparent), linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+              WebkitMaskComposite: "source-in",
+              maskComposite: "intersect",
               maskImage:
-                "radial-gradient(ellipse 70% 62% at 50% 50%, black 42%, rgba(0,0,0,0.7) 62%, transparent 84%)",
+                "radial-gradient(ellipse 62% 55% at 50% 48%, black 30%, rgba(0,0,0,0.55) 52%, transparent 72%), linear-gradient(to right, transparent, black 14%, black 86%, transparent), linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
             }}
           />
         </motion.div>
