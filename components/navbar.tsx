@@ -46,8 +46,8 @@ export function Navbar() {
         fixed top-0 left-0 right-0 z-50 
         transition-all duration-300 ease-in-out
         ${isScrolled 
-          ? "bg-[#0A0A1B]/80 backdrop-blur-xl border-b border-white/5 py-3" 
-          : "bg-transparent py-5"
+          ? "bg-[#0A0A1B]/70 backdrop-blur-xl border-b border-white/10 py-3 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)]" 
+          : "bg-[#0A0A1B]/20 backdrop-blur-md border-b border-white/5 py-5"
         }
       `}
     >
@@ -72,13 +72,13 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className="
-                  text-white/70 hover:text-white 
+                  text-white/70 hover:text-[#A855F7]
                   text-sm font-medium
                   transition-colors duration-200
                   relative
-                  after:absolute after:bottom-0 after:left-0 
+                  after:absolute after:-bottom-1 after:left-0 
                   after:w-0 after:h-0.5 
-                  after:bg-gradient-to-r after:from-[#00D4FF] after:to-[#8B5CF6]
+                  after:bg-gradient-to-r after:from-[#00D4FF] after:to-[#A855F7]
                   after:transition-all after:duration-300
                   hover:after:w-full
                 "
