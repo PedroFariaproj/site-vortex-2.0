@@ -321,7 +321,7 @@ const projects = [
   result: "Agendamentos via WhatsApp",
   accent: "#16A34A",
   gradientBar: "from-[#16A34A] to-[#4ADE80]",
-  url: "https://elisangelafisio.vercel.app/",
+  url: "https://www.elisangelalimafisio.com.br/",
   UI: ElisangelaFisioUI,
   },
   {
