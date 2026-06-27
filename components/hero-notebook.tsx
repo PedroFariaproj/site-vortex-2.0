@@ -107,8 +107,8 @@ export function HeroNotebook() {
       <motion.div
         animate={{ y: [0, -16, 0] }}
         transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-        className="relative z-10 w-full max-w-[560px]"
-        style={{ transformStyle: "preserve-3d" }}
+        className="relative z-10 w-full max-w-[620px] lg:max-w-[720px]"
+        style={{ transformStyle: "preserve-3d", isolation: "isolate" }}
       >
         {/* Notebook com parallax e hover de brilho */}
         <motion.div
@@ -116,26 +116,51 @@ export function HeroNotebook() {
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
           whileHover="hover"
         >
-          {/* Glow roxo difuso atrás da imagem */}
+          {/* Glow roxo difuso atrás da imagem (halo principal) */}
           <motion.div
-            className="absolute -inset-10 rounded-[40px] blur-[70px] -z-10"
+            className="absolute inset-[8%] rounded-full blur-[60px] -z-10 pointer-events-none"
             style={{
               background:
-                "radial-gradient(circle at 50% 45%, rgba(139,92,246,0.5), rgba(168,85,247,0.22) 45%, transparent 70%)",
+                "radial-gradient(circle at 50% 45%, rgba(168,85,247,0.55), rgba(139,92,246,0.25) 50%, transparent 68%)",
             }}
-            variants={{ hover: { opacity: 1, scale: 1.08 } }}
+            variants={{ hover: { opacity: 1, scale: 1.1 } }}
             animate={{ opacity: [0.55, 0.85, 0.55] }}
             transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           />
 
-          {/* Imagem real do notebook VÓRTEX */}
+          {/* Luz neon roxa/magenta embaixo do notebook */}
+          <motion.div
+            className="absolute left-[12%] right-[12%] bottom-[4%] h-[110px] blur-[34px] -z-10 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(217,70,239,0.6), rgba(168,85,247,0.3) 55%, transparent 72%)",
+            }}
+            animate={{ opacity: [0.5, 0.9, 0.5], scaleX: [0.92, 1.05, 0.92] }}
+            transition={{ duration: 4.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          />
+
+          {/*
+            Imagem real do notebook VÓRTEX integrada ao fundo.
+            - mix-blend-mode: screen apaga o fundo escuro da imagem contra o
+              fundo escuro da hero, eliminando o efeito de "print colado".
+            - máscara radial suaviza/apaga as bordas retangulares.
+            - drop-shadow roxo adiciona profundidade e brilho premium.
+          */}
           <Image
             src="/images/hero-notebook.png"
             alt="Notebook exibindo um site criado pela Vórtex"
             width={1100}
             height={970}
             priority
-            className="w-full h-auto drop-shadow-[0_30px_60px_rgba(139,92,246,0.45)]"
+            className="w-full h-auto object-contain"
+            style={{
+              mixBlendMode: "screen",
+              filter: "drop-shadow(0 0 35px rgba(168,85,247,0.55))",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 70% 62% at 50% 50%, black 42%, rgba(0,0,0,0.7) 62%, transparent 84%)",
+              maskImage:
+                "radial-gradient(ellipse 70% 62% at 50% 50%, black 42%, rgba(0,0,0,0.7) 62%, transparent 84%)",
+            }}
           />
         </motion.div>
       </motion.div>
